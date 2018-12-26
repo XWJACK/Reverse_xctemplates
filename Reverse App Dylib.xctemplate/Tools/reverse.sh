@@ -3,12 +3,12 @@ des_macho_path="${SRCROOT}/Resources/${app_name}.app/Contents/MacOS"
 des_framewotk_path="${SRCROOT}/Resources/${app_name}.app/Contents/Frameworks"
 CODE_SIGN_IDENTITY=""
 
-tweak_dylib="${TARGET_NAME}.dylib"
+tweak_dylib="lib${TARGET_NAME}.dylib"
 substitute_dylib="libsubstitute.dylib"
 
 # 源文件
 ori_tweak_dylib="${BUILT_PRODUCTS_DIR}/${tweak_dylib}"
-ori_substitute_dylib="${SRCROOT}/${PROJECT_NAME}/Core/${substitute_dylib}"
+ori_substitute_dylib="${SRCROOT}/libs/${substitute_dylib}"
 ori_macho="${SRCROOT}/Resources/${app_name}"
 
 # 目标文件
