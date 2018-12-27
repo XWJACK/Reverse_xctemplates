@@ -34,7 +34,7 @@ echo "XWJACK Copy ${ori_tweak_dylib} to ${des_tweak_dylib}"
 
 
 #Insert dylib/framework
-${SRCROOT}/Tools/insert_dylib --all-yes "@rpath/${tweak_dylib}" "${ori_macho}" "${des_macho}"
+${SRCROOT}/Tools/insert_dylib --all-yes "@loader_path/../Frameworks/${tweak_dylib}" "${ori_macho}" "${des_macho}"
 
 # Sign
 /usr/bin/codesign --verbose=4 -f -s "$CODE_SIGN_IDENTITY" "$des_substitute_dylib"
